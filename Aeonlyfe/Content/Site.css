@@ -1,8 +1,19 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url('images/doorwaybg.jpg');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-color:black;
+    background-size:cover;
 }
 
+#newbod{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color:white;
+    background-image:none;
+}
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
@@ -21,4 +32,77 @@ input,
 select,
 textarea {
     max-width: 280px;
+}
+.navbar-fixed-top {
+    background-color: black;
+    font-family: 'IM Fell English SC', serif;
+    text-decoration-color: coral;
+}
+#Alyfe{
+    font-family: 'Condiment', cursive;
+    font-weight:bold;
+    color:crimson;
+}
+.navbar-brand {
+    font-family: 'IM Fell English SC', serif;
+    color: #a2a53b;
+     background-color:black !important;
+}
+.navbar-reviewus {
+    font-family: 'IM Fell English SC', serif;
+    color: #a2a53b;
+    background-color:black !important;
+}
+.navbar-aboutus {
+    font-family: 'IM Fell English SC', serif;
+    color: #a2a53b;
+    background-color:black !important;
+}
+.navbar-contactus { 
+    font-family: 'IM Fell English SC', serif;
+    color: #a2a53b;
+    background-color:black !important;
+    
+}
+div.jumbotron{ 
+    opacity:0.6;
+    background-image:linear-gradient(black,red);
+
+    
+}
+#foundit{
+    font-family: 'Aguafina Script', cursive;
+    color: #a2a53b;
+    
+}
+.lead{
+    font-family: 'IM Fell English SC', serif;
+    color:white;
+}
+h2.homepage{
+    font-family: 'IM Fell English SC', serif;
+    color: #a2a53b;
+}
+p.descr{
+    font-family: 'Aguafina Script', cursive;
+    color: #a2a53b;
+    font-size:22px;
+}
+h2.csoon {
+    font-family: 'IM Fell English SC', serif;
+    color: #a2a53b;
+    text-align: center;
+    font-size: 40px;
+}
+p.soondescript{
+   font-family: 'Aguafina Script', cursive;
+   color: #a2a53b;
+   text-align:center;
+   font-size:22px;
+   font-stretch:extra-expanded;
+}
+p.sitefooter{
+    font-family:'Trebuchet MS';
+    font-size:12px;
+    color:ghostwhite;
 }

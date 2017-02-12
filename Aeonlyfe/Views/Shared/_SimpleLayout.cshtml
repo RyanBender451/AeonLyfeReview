@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Condiment|IM+Fell+English+SC" rel="stylesheet">
+</head>
+<body id="newbod">
+    <div class="navbar navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <h2 id="Alyfe">AeonLyfe</h2>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Your Source for the Best Travel Reviews", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li id="ReviewUs">@Html.ActionLink("Reviews", "Index", "Reviews", new { area = "" }, new { @class = "navbar-reviewus" })</li>
+                    <li id="AboutUs">@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "navbar-aboutus" })</li>
+                    <li id="ContactUs">@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "navbar-contactus" })</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year AeonLyfe Productions</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
