@@ -8,32 +8,33 @@
     ViewBag.Title = "Index";
 }
 
-    <h2>Index</h2>
+<h2>Categories Index</h2>
 
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-   <p>This is the Category page, used only by employees.  Nothing fancy just a basic page</p>
-    <table class="table">
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>Welcome employees, nothing fancy here, just please update information as needed </p>
+<p> and whoever is stealing my lunch...Stop it, alright or else</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Place)
+        </th>
+        <th></th>
+    </tr>
+    @* Because this is an employee only page, it doesn't have to be fancy so its the basic code created by visual studio *@
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Place)
-            </th>
-            <th></th>
+            <td>
+                @Html.DisplayFor(modelItem => item.Place)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
         </tr>
+    }
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Place)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </td>
-            </tr>
-        }
-
-    </table>
+</table>

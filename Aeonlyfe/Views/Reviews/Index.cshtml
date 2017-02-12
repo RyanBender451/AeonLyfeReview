@@ -4,15 +4,20 @@
     ViewBag.Title = "Index";
 }
 
-<h2 class="reviewh2">Index</h2>
+<h2 class="reviewh2">Review Index</h2>
 
 <p>
-    <a href="Reviews/Create" class="btn btn-info" role="button">Create</a>
+    @* Create button made danger is used for styling purposes  *@
+    @Html.ActionLink("Create New", "Create",null ,new { @class = " btn btn-danger", role = "button" })
     
 </p>
+@* the table has been changed to a bootstrap row and columns, each has a thumbnail so it has a background different from the page background *@
 <div class="row">
+    @* in the foreach loop I used a thumbnail and warning buttons for style *@
+    @* Displays title, Author, which religion its from, date, how many stars, how well liked the post was  *@
     @foreach (var item in Model)
     {
+         
         <div class="col-md-4">
             <div class="thumbnail reviewthumb">
                 <div class="caption">
@@ -20,12 +25,13 @@
                     <p class="reviewp">@Html.DisplayFor(modelItem => item.ReviewAuthor)</p>
                     <p class="reviewp">@Html.DisplayFor(modelItem => item.Category.Place)</p>
                     <p class="reviewp">@Html.DisplayFor(modelItem => item.ReviewDate)</p>
-                    <p class="reviewp">@Html.DisplayFor(modelItem => item.ReviewReview)</p>
-                   
+                    <p class="reviewp">@Html.DisplayFor(modelItem => item.ReviewScore) stars</p>
+                    <p class="reviewp">Likes: @Html.DisplayFor(modelItem => item.ReviewReview)</p>
+                    
                     <div class="btn-group">
-                        @Html.ActionLink("Details", "Details", new { id = item.ReviewID }, new { @class = " btn btn-primary", role = "button" })
-                        @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }, new { @class = " btn btn-primary", role = "button" })
-                        @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID }, new { @class = " btn btn-primary", role = "button" })
+                        @Html.ActionLink("Details", "Details", new { id = item.ReviewID }, new { @class = " btn btn-warning", role = "button" })
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }, new { @class = " btn btn-warning", role = "button" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ReviewID }, new { @class = " btn btn-warning", role = "button" })
                      </div>
                     </div>
             </div>
@@ -33,62 +39,3 @@
     }
 </div>
 
-
-@*<table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Category.Place)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReviewScore)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReviewReview)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReviewTitle)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReviewAuthor)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReviewContent)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ReviewDate)
-            </th>
-            <th></th>
-        </tr>
-
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category.Place)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReviewScore)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReviewReview)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReviewTitle)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReviewAuthor)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReviewContent)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ReviewDate)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id=item.ReviewID }) |
-                @Html.ActionLink("Details", "Details", new { id=item.ReviewID }) |
-                @Html.ActionLink("Delete", "Delete", new { id=item.ReviewID })
-            </td>
-        </tr>
-    }
-
-    </table>*@

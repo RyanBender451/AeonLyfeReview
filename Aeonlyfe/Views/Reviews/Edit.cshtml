@@ -4,9 +4,10 @@
     ViewBag.Title = "Edit";
 }
 
-<h2 class="reviewh2">Edit</h2>
+<h2 class="reviewh2">Edit the Review</h2>
 
-
+@* on the form group I used css to add a background *@
+@* Buttons used are danger for styling purposes *@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -66,7 +67,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.CategoryID, "CategoryID", htmlAttributes: new { @class = "control-label col-md-2 coleditrev" })
+            @Html.LabelFor(model => model.CategoryID, "Religion", htmlAttributes: new { @class = "control-label col-md-2 coleditrev" })
             <div class="col-md-10">
                 @Html.DropDownList("CategoryID", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
@@ -75,14 +76,15 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input type="submit" value="Save" class="btn btn-danger" />
             </div>
         </div>
     </div>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @* Action link was made into a button *@
+    @Html.ActionLink("Back to List", "Index", null, new { @class = " btn btn-danger", role = "button" })
 </div>
 
 @section Scripts {

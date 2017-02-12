@@ -1,35 +1,37 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-    <div class="container">
+@* This is the main page that links to index of both pages each page has a footer that can link to categories index*@
+<div class="container">
 
-
+    @* used the jumbotron to get look i wanted for the page, I used a gradient for it *@
     <div class="jumbotron">
 
         <h1 id="foundit">You have found it</h1>
         <p class="lead">Your stop for the best (and free) Reviews of the afterlife</p>
 
     </div>
-
+    @* this div row is the top row for the main page, it houses 2 coloumns each 6 *@
     <div class="row">
         <div class="col-md-6">
             <h2 class="homepage">Find Great Reviews</h2>
             <p class="descr">
-               AfterLyfe's user base keeps on growing, people are literally dying to get in to most of these places.
+                AfterLyfe's user base keeps on growing, people are literally dying to get in to most of these places.
             </p>
-            
+
         </div>
         <div class="col-md-6">
             <h2 class="homepage">Honesty</h2>
             <p class="descr">We only host trusted reviews!  No bots come in here, our patented system makes sure that you get what you are looking for! </p>
-            
+
         </div>
-        </div>
-        <div class="row">
+    </div>
+    @* this is the bottom row it is a full 12 with a learn more button that doesn't go anywhere *@
+    <div class="row">
         <div class="col-md-12 ">
             <h2 class="csoon">Comming Soon</h2>
             <p class="soondescript">We are partnering with Demona's Dating so you can find a partner for your next trip!</p>
-            <p class="soondescript"><a class="btn btn-default" href="#">Learn more &raquo;</a></p>
+            <p class="soondescript"><a class="btn btn-danger" href="#">Learn more &raquo;</a></p>
         </div>
     </div>
 </div>

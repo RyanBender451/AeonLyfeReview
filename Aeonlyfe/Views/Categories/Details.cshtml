@@ -8,7 +8,7 @@
 @{
     ViewBag.Title = "Details";
 }
-
+@* Because this is an employee only page, it doesn't have to be fancy so its the basic code created by visual studio *@
 <h2>Details</h2>
 
 <div>
@@ -27,5 +27,5 @@
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")|@Html.ActionLink("Delete", "Delete")
+    @Html.ActionLink("Back to List", "Index")|@Html.ActionLink("Delete", "Delete", new { id = Model.Id })
 </p>

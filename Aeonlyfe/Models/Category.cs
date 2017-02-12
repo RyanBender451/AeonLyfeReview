@@ -8,6 +8,7 @@ namespace Aeonlyfe.Models
 {
     public class Category
     {
+        //sets up the vars and gets the display name, it also adds this to the collection
         public int Id { get; set; }
         [Display(Name = "Religion")]
         public string Place { get; set; }

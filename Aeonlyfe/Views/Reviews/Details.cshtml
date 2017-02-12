@@ -4,71 +4,74 @@
     ViewBag.Title = "Details";
 }
 
-<h2 class="reviewh2">Details</h2>
+<h2 class="reviewh2">Review Details</h2>
 
 <div class="revdiv">
-    <h4 class="h4review">Review</h4>
+    @* added a thumbnail to make it more readable and add some style to it *@
     <hr />
-    <dl class="dl-horizontal dlreview">
-        <dt>
-            @Html.DisplayNameFor(model => model.Category.Place)
-        </dt>
+    <div class="thumbnail detailthumb">
+        <h4 class="reviewh4">Review</h4>
+        <dl class="dl-horizontal dlreview">
+            <dt>
+                @Html.DisplayNameFor(model => model.Category.Place)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Category.Place)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Category.Place)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewScore)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ReviewScore)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewScore)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ReviewScore)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewReview)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ReviewReview)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewReview)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ReviewReview)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewTitle)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ReviewTitle)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewTitle)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ReviewTitle)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewAuthor)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ReviewAuthor)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewAuthor)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ReviewAuthor)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewContent)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ReviewContent)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewContent)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ReviewContent)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.ReviewDate)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.ReviewDate)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.ReviewDate)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.ReviewDate)
+            </dd>
 
-    </dl>
+        </dl>
+    </div>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReviewID }, new { @class = " btn btn-primary", role = "button" }) 
+    @Html.ActionLink("Back to List", "Index", null, new { @class = " btn btn-primary", role = "button" })
 </p>

@@ -33,11 +33,22 @@ select,
 textarea {
     max-width: 280px;
 }
+/*Sets up the main navbar*/
 .navbar-fixed-top {
     background-color: black;
     font-family: 'IM Fell English SC', serif;
     text-decoration-color: coral;
 }
+/*Border color for the button when it small*/
+button.navbar-toggle{
+    border-color:red;
+}
+/*Icon bars are now red*/
+span.icon-bar{
+
+    background-color:red;
+}
+/*below are the text for most of the navbar, they are put together for style*/
 #Alyfe{
     font-family: 'Condiment', cursive;
     font-weight:bold;
@@ -47,6 +58,7 @@ textarea {
     font-family: 'IM Fell English SC', serif;
     color: #a2a53b;
     background-color:black !important;
+    text-align:center;
 }
 .navbar-reviewus {
     font-family: 'IM Fell English SC', serif;
@@ -64,12 +76,14 @@ textarea {
     background-color:black !important;
     
 }
+/*this is the area specific to the first 'splash' page, it gives a nice first look*/
 div.jumbotron{ 
     opacity:0.6;
     background-image:linear-gradient(black,red);
 
     
 }
+/*This is the style for the main index page, it goes through the colors and the font styles mainly*/
 #foundit{
     font-family: 'Aguafina Script', cursive;
     color: #a2a53b;
@@ -107,25 +121,33 @@ p.sitefooter{
     color:ghostwhite;
 }
 /*Review pages*/
-div.reviewthumb{
-    opacity:0.6;
-    background-color:aquamarine;
+/*First one is the thumbnails on the index of the review page*/
+div.reviewthumb {
+    opacity: 0.7;
+    background-image: url('images/parchmenta.jpg');
+    background-size:cover;
+}
+h4.reviewh4{
+    font-family: 'IM Fell English SC', serif;
+    
 }
 h3.reviewh3{
-        font-family: 'IM Fell English SC', serif;
-    color:#a2a53b;
+    font-family: 'IM Fell English SC', serif;
+    color:ghostwhite;
 }
 h2.reviewh2{
-        font-family: 'IM Fell English SC', serif;
+    font-family: 'IM Fell English SC', serif;
     color:#a2a53b;
 }
 p.reviewp{
         font-family: 'IM Fell English SC', serif;
-    color:#a2a53b;
+    color:ghostwhite;
 }
-div.createformr{
-        opacity:0.7;
-    background-color:snow;
+/*background pic for the form in the create page*/
+div.createformr {
+    opacity: 0.7;
+    background-image: url('images/parchmentpage.jpg');
+    background-size:cover;
 }
 h4.h4create{
     font-family: 'IM Fell English SC', serif;
@@ -133,12 +155,23 @@ h4.h4create{
 
 }
 div.revdiv{
-    text-decoration-color:white;
+    background-color:white;
 }
-dl.dlreview{
-     text-decoration-color:white;
+/*background image for the detail page*/
+div.detailthumb {
+    background-image: url('images/oldparchment.jpg');
+    background-size:cover;
 }
 label.coleditrev{
     font-family: 'IM Fell English SC', serif;
     color:#a2a53b;
+}
+label.revcreate{
+    font-family: 'IM Fell English SC', serif;
+}
+/*About section*/
+div.thumbabout {
+    background-image: url('images/oldparchment.jpg');
+    background-size:cover;
+
 }

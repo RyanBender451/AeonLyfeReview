@@ -10,11 +10,15 @@
     <link href="https://fonts.googleapis.com/css?family=Aguafina+Script|Condiment|IM+Fell+English+SC" rel="stylesheet">
 </head>
 <body>
+    @* Created the header/navbar *@
+    @* added a page header to surrond the navbar because it made it look better *@
     <div class="page-header">
         <div class="navbar navbar navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <h2 id="Alyfe">AeonLyfe</h2>
+                    @* Layout is very similar to the base nav but I tweaked it a bit *@
+                    @* added different colors to the collapse box *@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -22,20 +26,42 @@
                     </button>
                     @Html.ActionLink("Your Source for the Best Travel Reviews", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
                 </div>
+                @* the action links have been changed so the style fits with the page and they do not turn white when you click them *@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li id="ReviewUs">@Html.ActionLink("Reviews", "Index", "Reviews", new { area = "" }, new { @class = "navbar-reviewus" })</li>
-                        <li id="AboutUs">@Html.ActionLink("About", "Index", "Home", new { area = "" }, new { @class = "navbar-aboutus" })</li>
+                        <li id="AboutUs">@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "navbar-aboutus" })</li>
                         <li id="ContactUs">@Html.ActionLink("Contact", "Index", "Home", new { area = "" }, new { @class = "navbar-contactus" })</li>
                     </ul>
+
+                    @* added a navbar with input in it  *@
+                    <form class="navbar-form navbar-right" role="search">
+
+                        <div class="form-group input-group">
+                            <ol class="nav navbar-right">
+                                <li>
+                                    <input id="searchid" type="text" class="form-control" placeholder="Search..Comming soon" disabled>
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <span id="glycol" class="glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </span>
+                                </li>
+                            </ol>
+
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
         <div class="container body-content">
             @RenderBody()
             <hr />
             <footer>
                 <p class="sitefooter">&copy; @DateTime.Now.Year AeonLyfe Productions</p>
+                <p class="sitefooter">@Html.ActionLink("This link is for employees only", "Index", "Categories")</p>
             </footer>
         </div>
     </div>
