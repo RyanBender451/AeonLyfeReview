@@ -4,22 +4,24 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2 class="reviewh2">Index</h2>
 
 <p>
-    <a href="Create" class="btn btn-info" role="button">Create</a>
+    <a href="Reviews/Create" class="btn btn-info" role="button">Create</a>
     
 </p>
 <div class="row">
     @foreach (var item in Model)
     {
         <div class="col-md-4">
-            <div class="thumbnail">
+            <div class="thumbnail reviewthumb">
                 <div class="caption">
-                    <h3>@Html.DisplayFor(modelItem => item.ReviewTitle) </h3>
-                    <p>@Html.DisplayFor(modelItem => item.ReviewAuthor)</p>
-                    <p>@Html.DisplayFor(modelItem => item.Category.Place)</p>
-                    <p>@Html.DisplayFor(modelItem => item.ReviewDate)</p>
+                    <h3 class="reviewh3">@Html.DisplayFor(modelItem => item.ReviewTitle) </h3>
+                    <p class="reviewp">@Html.DisplayFor(modelItem => item.ReviewAuthor)</p>
+                    <p class="reviewp">@Html.DisplayFor(modelItem => item.Category.Place)</p>
+                    <p class="reviewp">@Html.DisplayFor(modelItem => item.ReviewDate)</p>
+                    <p class="reviewp">@Html.DisplayFor(modelItem => item.ReviewReview)</p>
+                   
                     <div class="btn-group">
                         @Html.ActionLink("Details", "Details", new { id = item.ReviewID }, new { @class = " btn btn-primary", role = "button" })
                         @Html.ActionLink("Edit", "Edit", new { id = item.ReviewID }, new { @class = " btn btn-primary", role = "button" })
