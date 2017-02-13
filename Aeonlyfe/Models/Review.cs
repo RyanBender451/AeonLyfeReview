@@ -12,7 +12,7 @@ namespace Aeonlyfe.Models
         //This sets up the db vars and gives the display names for them
         [Key]
         public int ReviewID { get; set; }
-        [Display(Name = "How many starts will you give this place")]
+        [Display(Name = "How many stars will you give this place")]
         public int ReviewScore { get; set; }
         [Display(Name = "What do people think of this review")]
         public int ReviewReview { get; set; }
