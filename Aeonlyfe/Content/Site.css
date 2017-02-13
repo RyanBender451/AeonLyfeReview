@@ -56,23 +56,23 @@ span.icon-bar{
 }
 .navbar-brand {
     font-family: 'IM Fell English SC', serif;
-    color: #a2a53b;
+    color: #A2A53B;
     background-color:black !important;
     text-align:center;
 }
 .navbar-reviewus {
     font-family: 'IM Fell English SC', serif;
-    color: #a2a53b;
+    color: #A2A53B;
     background-color:black !important;
 }
 .navbar-aboutus {
     font-family: 'IM Fell English SC', serif;
-    color: #a2a53b;
+    color: #A2A53B;
     background-color:black !important;
 }
 .navbar-contactus { 
     font-family: 'IM Fell English SC', serif;
-    color: #a2a53b;
+    color: #A2A53B;
     background-color:black !important;
     
 }
@@ -86,7 +86,7 @@ div.jumbotron{
 /*This is the style for the main index page, it goes through the colors and the font styles mainly*/
 #foundit{
     font-family: 'Aguafina Script', cursive;
-    color: #a2a53b;
+    color: #A2A53B;
     
 }
 .lead{
@@ -95,22 +95,22 @@ div.jumbotron{
 }
 h2.homepage{
     font-family: 'IM Fell English SC', serif;
-    color: #a2a53b;
+    color: #A2A53B;
 }
 p.descr{
     font-family: 'Aguafina Script', cursive;
-    color: #a2a53b;
+    color: #A2A53B;
     font-size:22px;
 }
 h2.csoon {
     font-family: 'IM Fell English SC', serif;
-    color: #a2a53b;
+    color: #A2A53B;
     text-align: center;
     font-size: 40px;
 }
 p.soondescript{
    font-family: 'Aguafina Script', cursive;
-   color: #a2a53b;
+   color: #A2A53B;
    text-align:center;
    font-size:22px;
    font-stretch:extra-expanded;
@@ -133,15 +133,15 @@ h4.reviewh4{
 }
 h3.reviewh3{
     font-family: 'IM Fell English SC', serif;
-    color:ghostwhite;
+    color:#5C0000;
 }
 h2.reviewh2{
     font-family: 'IM Fell English SC', serif;
-    color:#a2a53b;
+    color:#A2A53B;
 }
 p.reviewp{
-        font-family: 'IM Fell English SC', serif;
-    color:ghostwhite;
+    font-family: 'IM Fell English SC', serif;
+    color:#5C0000;
 }
 /*background pic for the form in the create page*/
 div.createformr {
@@ -164,7 +164,7 @@ div.detailthumb {
 }
 label.coleditrev{
     font-family: 'IM Fell English SC', serif;
-    color:#a2a53b;
+    color:#A2A53B;
 }
 label.revcreate{
     font-family: 'IM Fell English SC', serif;
